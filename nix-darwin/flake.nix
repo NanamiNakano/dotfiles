@@ -40,7 +40,7 @@
             extra-trusted-public-keys = [
               "cache.lix.systems:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o="
             ];
-            bash-prompt-prefix = "(nix:$name) ";
+            bash-prompt-prefix = "(nix:$name)\\040";
             max-jobs = "auto";
             nix-path = [
               "nixpkgs=flake:nixpkgs"
@@ -55,7 +55,7 @@
             "/etc/profiles/per-user/$USER"
           ];
           environment.systemPackages = with pkgs; [
-            vim
+            helix
           ];
           fonts.packages = with pkgs; [
             nerd-fonts.jetbrains-mono

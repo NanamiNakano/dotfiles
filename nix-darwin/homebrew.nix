@@ -5,6 +5,7 @@
     global.autoUpdate = false;
   };
 
+  # pre-install apps
   homebrew.casks = [
     "iterm2"
     "secretive"

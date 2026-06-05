@@ -40,6 +40,8 @@
       HOMEBREW_NO_ENV_HINTS = true;
 
       SSH_AUTH_SOCK = "/Users/nanami/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh";
+
+      EDITOR = "code --wait";
     };
 
     shellAliases = {
