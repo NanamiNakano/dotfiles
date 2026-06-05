@@ -15,5 +15,7 @@
     "discord"
     "zoom"
     "1password"
+    "squirrel-app"
+    "openinterminal"
   ];
 }

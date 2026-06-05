@@ -14,31 +14,33 @@
       format = "ssh";
       signByDefault = true;
     };
-    settings = {
-      init.defaultBranch = "main";
-      pull.rebase = true;
-      diff.colorMoved = "default";
+    settings = [
+      {
+        init.defaultBranch = "main";
+        pull.rebase = true;
+        diff.colorMoved = "default";
 
-      core = {
-        autocrlf = "input";
-        pager = "delta";
-      };
-      sequence.editor = "interactive-rebase-tool";
-      interactive.diffFilter = "delta --color-only";
-      merge.conflictstyle = "diff3";
-      delta = {
-        navigate = true;
-        dark = true;
-        line-numbers = true;
-      };
-
-      url = {
-        "git@github.com" = {
-          insteadOf = "https://github.com/";
+        core = {
+          autocrlf = "input";
+          pager = "delta";
         };
-      };
-      fetch.parallel = 0;
-    };
+        sequence.editor = "interactive-rebase-tool";
+        interactive.diffFilter = "delta --color-only";
+        merge.conflictstyle = "diff3";
+        delta = {
+          navigate = true;
+          dark = true;
+          line-numbers = true;
+        };
+
+        url = {
+          "git@github.com" = {
+            insteadOf = "https://github.com/";
+          };
+        };
+        fetch.parallel = 0;
+      }
+    ];
     includes = [
       {
         path = "~/dotfiles/.gitconfig.private";
