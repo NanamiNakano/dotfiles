@@ -74,10 +74,6 @@
           };
           system.primaryUser = "nanami";
 
-          system.keyboard = {
-            enableKeyMapping = true;
-            remapCapsLockToControl = true;
-          };
           security.pam.services.sudo_local.touchIdAuth = true;
 
           imports = [
