@@ -5,8 +5,8 @@
     global.autoUpdate = false;
   };
 
-  # pre-install apps
   homebrew.casks = [
+    # pre-install apps
     "iterm2"
     "secretive"
     "google-chrome"
@@ -17,5 +17,9 @@
     "1password"
     "squirrel-app"
     "openinterminal"
+
+    # quick look extensions
+    "syntax-highlight"
+    "quicklook-video"
   ];
 }
