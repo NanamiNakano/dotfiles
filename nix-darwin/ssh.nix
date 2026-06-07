@@ -9,6 +9,12 @@
         PreferredAuthentications = "publickey,gssapi-with-mic,hostbased,keyboard-interactive,password";
         PasswordAuthentication = "no";
       };
+
+      "github.com" = {
+        Hostname = "ssh.github.com";
+        Port = 443;
+        User = "git";
+      };
     };
   };
 }
