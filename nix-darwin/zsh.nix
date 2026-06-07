@@ -29,7 +29,7 @@
 
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
+    enableCompletion = false;
 
     sessionVariables = {
       # LS color, defined esp. for cd color, 'cause exa has its own setting
@@ -55,6 +55,8 @@
       with lib;
       mkMerge [
         (mkOrder 500 ''
+          zstyle ':plugin:ez-compinit' 'use-cache' 'yes'
+
           zstyle ':completion:*' list-colors "''${(@s.:.)LS_COLORS}"
           zstyle ':completion:*:matches' group 'yes'
           zstyle ':completion:*:options' description 'yes'
@@ -71,8 +73,9 @@
           zstyle ':completion:*:functions' ignored-patterns '(_*|pre(cmd|exec))'
           zstyle ':completion:*' use-cache true
           zstyle ':completion:*' rehash true
-          zstyle ":history-search-multi-word" page-size "11"
           zstyle ':completion:*' menu select
+
+          zstyle ":history-search-multi-word" page-size "11"
         '')
         # Key Bindings
 
@@ -92,15 +95,19 @@
 
     antidote.enable = true;
     antidote.plugins = [
+      "mattmc3/ez-compinit"
       "romkatv/zsh-defer"
       "ohmyzsh/ohmyzsh path:lib/git.zsh"
+      "ohmyzsh/ohmyzsh path:lib/functions.zsh"
+      "ohmyzsh/ohmyzsh path:lib/directories.zsh"
 
       "zsh-users/zsh-completions path:src kind:fpath"
       "Aloxaf/fzf-tab"
-      "z-shell/zzcomplete"
 
       "zsh-users/zsh-autosuggestions kind:defer"
+      "z-shell/ZUI kind:defer"
       "z-shell/F-Sy-H kind:defer"
+      "z-shell/zzcomplete kind:defer"
       "z-shell/zsh-navigation-tools kind:defer"
 
       "ohmyzsh/ohmyzsh path:plugins/git/git.plugin.zsh kind:defer"
@@ -109,7 +116,6 @@
       "ohmyzsh/ohmyzsh path:plugins/sudo/sudo.plugin.zsh kind:defer"
       "ohmyzsh/ohmyzsh path:plugins/brew/brew.plugin.zsh kind:defer"
       "ohmyzsh/ohmyzsh path:plugins/extract/extract.plugin.zsh kind:defer"
-      "z-shell/ZUI kind:defer"
       "MichaelAquilina/zsh-autoswitch-virtualenv kind:defer"
       "sunlei/zsh-ssh kind:defer"
     ];
