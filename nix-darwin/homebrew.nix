@@ -17,6 +17,7 @@
     "1password"
     "squirrel-app"
     "openinterminal"
+    "snipaste"
 
     # quick look extensions
     "syntax-highlight"
