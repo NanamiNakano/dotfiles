@@ -74,6 +74,14 @@
           };
           system.primaryUser = "nanami";
 
+          system.defaults.finder = {
+            AppleShowAllExtensions = true;
+            ShowPathbar = true;
+            ShowStatusBar = true;
+            # prefer list view
+            FXPreferredViewStyle = "Nlsv";
+          };
+
           security.pam.services.sudo_local.touchIdAuth = true;
 
           imports = [
