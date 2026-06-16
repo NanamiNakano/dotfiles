@@ -16,8 +16,8 @@
     "zoom"
     "1password"
     "squirrel-app"
-    "openinterminal"
     "snipaste"
+    "calibre"
 
     # quick look extensions
     "syntax-highlight"

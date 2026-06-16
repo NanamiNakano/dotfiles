@@ -32,13 +32,14 @@
           dark = true;
           line-numbers = true;
         };
-
+        fetch.parallel = 0;
+      }
+      {
         url = {
           "git@github.com:" = {
             insteadOf = "https://github.com/";
           };
         };
-        fetch.parallel = 0;
       }
     ];
     includes = [
