@@ -13,9 +13,6 @@
   ];
   
   programs.home-manager.enable = true;
-  programs.vscode = {
-    enable = true;
-  };
 
   imports = [
     ./zsh.nix

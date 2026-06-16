@@ -18,6 +18,7 @@
     "squirrel-app"
     "snipaste"
     "calibre"
+    "visual-studio-code"
 
     # quick look extensions
     "syntax-highlight"
