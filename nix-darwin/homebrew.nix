@@ -6,7 +6,6 @@
   };
 
   homebrew.casks = [
-    # pre-install apps
     "iterm2"
     "secretive"
     "google-chrome"
@@ -19,6 +18,7 @@
     "snipaste"
     "calibre"
     "visual-studio-code"
+    "mactex"
 
     # quick look extensions
     "syntax-highlight"
