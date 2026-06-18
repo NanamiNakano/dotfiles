@@ -10,6 +10,7 @@
     nixfmt-rs
     ripgrep
     eza
+    helix
   ];
   
   programs.home-manager.enable = true;

@@ -6,6 +6,10 @@
     onActivation.cleanup = "zap";
   };
 
+  homebrew.brews = [
+    "nanaminakano/gpoc/globalprotect-openconnect"
+  ];
+
   homebrew.casks = [
     "iterm2"
     "secretive"

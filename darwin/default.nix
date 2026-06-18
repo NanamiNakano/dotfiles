@@ -31,9 +31,6 @@
     "$HOME/.nix-profile"
     "/etc/profiles/per-user/$USER"
   ];
-  environment.systemPackages = with pkgs; [
-    helix
-  ];
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
