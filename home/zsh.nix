@@ -49,6 +49,7 @@
       la = "eza -a -G";
       darwin-build = "darwin-rebuild build --flake ~/dotfiles#Nanamis-Big-MacBook-Pro";
       darwin-switch = "sudo darwin-rebuild switch --flake ~/dotfiles#Nanamis-Big-MacBook-Pro";
+      darwin-update = "nix flake update --flake ~/dotfiles";
     };
 
     initContent =
