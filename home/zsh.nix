@@ -47,8 +47,8 @@
     shellAliases = {
       lx = "eza -a --icons -G -l";
       la = "eza -a -G";
-      darwin-build = "darwin-rebuild build --flake ~/dotfiles/nix-darwin#Nanamis-Big-MacBook-Pro";
-      darwin-switch = "sudo darwin-rebuild switch --flake ~/dotfiles/nix-darwin#Nanamis-Big-MacBook-Pro";
+      darwin-build = "darwin-rebuild build --flake ~/dotfiles#Nanamis-Big-MacBook-Pro";
+      darwin-switch = "sudo darwin-rebuild switch --flake ~/dotfiles#Nanamis-Big-MacBook-Pro";
     };
 
     initContent =
