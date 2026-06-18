@@ -21,12 +21,14 @@
       ...
     }:
     let
+      username = "nanami";
+
       darwinConfiguration = ./darwin;
       homeConfiguration = {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { inherit inputs; };
-        home-manager.users.nanami = ./home;
+        home-manager.extraSpecialArgs = { inherit username inputs; };
+        home-manager.users.${username} = ./home;
       };
     in
     {
@@ -34,7 +36,7 @@
       # $ darwin-rebuild build --flake .#Nanamis-Big-MacBook-Pro
       darwinConfigurations."Nanamis-Big-MacBook-Pro" = nix-darwin.lib.darwinSystem {
         specialArgs = {
-          inherit self inputs;
+          inherit self username inputs;
         };
 
         modules = [

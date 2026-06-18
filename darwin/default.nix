@@ -1,4 +1,4 @@
-{ self, lib, pkgs, ... }:
+{ self, username, lib, pkgs, ... }:
 
 {
   nixpkgs.hostPlatform = "aarch64-darwin";
@@ -45,11 +45,11 @@
   # $ darwin-rebuild changelog
   system.stateVersion = 6;
 
-  users.users.nanami = {
-    name = "nanami";
-    home = "/Users/nanami";
+  users.users.${username} = {
+    name = username;
+    home = "/Users/${username}";
   };
-  system.primaryUser = "nanami";
+  system.primaryUser = username;
 
   system.defaults.finder = {
     AppleShowAllExtensions = true;
