@@ -3,12 +3,13 @@
     enable = true;
     enableZshIntegration = true;
     global.autoUpdate = false;
+    onActivation.cleanup = "zap";
   };
 
   homebrew.casks = [
     "iterm2"
     "secretive"
-    "google-chrome"
+    "zen"
     "jetbrains-toolbox"
     "telegram"
     "discord"
