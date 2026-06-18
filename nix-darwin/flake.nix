@@ -21,74 +21,7 @@
       ...
     }:
     let
-      configuration =
-        { lib, pkgs, ... }:
-        {
-          nixpkgs.hostPlatform = "aarch64-darwin";
-          nixpkgs.config.allowUnfree = true;
-
-          nix.package = pkgs.lix;
-          nix.settings = {
-            experimental-features = [
-              "nix-command"
-              "flakes"
-            ];
-            always-allow-substitutes = true;
-            extra-trusted-substituters = [
-              "https://cache.lix.systems"
-            ];
-            extra-trusted-public-keys = [
-              "cache.lix.systems:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o="
-            ];
-            bash-prompt-prefix = "(nix:$name)\\040";
-            max-jobs = "auto";
-            nix-path = [
-              "nixpkgs=flake:nixpkgs"
-            ];
-          };
-
-          programs.zsh.enable = true;
-
-          environment.profiles = lib.mkForce [
-            "/run/current-system/sw"
-            "$HOME/.nix-profile"
-            "/etc/profiles/per-user/$USER"
-          ];
-          environment.systemPackages = with pkgs; [
-            helix
-          ];
-          fonts.packages = with pkgs; [
-            nerd-fonts.jetbrains-mono
-          ];
-
-          # Set Git commit hash for darwin-version.
-          system.configurationRevision = self.rev or self.dirtyRev or null;
-
-          # Used for backwards compatibility, please read the changelog before changing.
-          # $ darwin-rebuild changelog
-          system.stateVersion = 6;
-
-          users.users.nanami = {
-            name = "nanami";
-            home = "/Users/nanami";
-          };
-          system.primaryUser = "nanami";
-
-          system.defaults.finder = {
-            AppleShowAllExtensions = true;
-            ShowPathbar = true;
-            ShowStatusBar = true;
-            # prefer list view
-            FXPreferredViewStyle = "Nlsv";
-          };
-
-          security.pam.services.sudo_local.touchIdAuth = true;
-
-          imports = [
-            ./homebrew.nix
-          ];
-        };
-
+      darwinConfiguration = ./darwin;
       homeConfiguration = {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
@@ -100,8 +33,12 @@
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#Nanamis-Big-MacBook-Pro
       darwinConfigurations."Nanamis-Big-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+        specialArgs = {
+          inherit self inputs;
+        };
+
         modules = [
-          configuration
+          darwinConfiguration
           home-manager.darwinModules.home-manager
           homeConfiguration
         ];
