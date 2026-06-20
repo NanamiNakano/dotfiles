@@ -103,6 +103,7 @@
       "ohmyzsh/ohmyzsh path:lib/directories.zsh"
 
       "zsh-users/zsh-completions path:src kind:fpath"
+      "z-shell/ZUI path:functions kind:fpath"
       "Aloxaf/fzf-tab"
 
       "zsh-users/zsh-autosuggestions kind:defer"
