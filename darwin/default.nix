@@ -1,7 +1,6 @@
 {
   self,
   username,
-  lib,
   pkgs,
   ...
 }:
@@ -30,22 +29,6 @@
     ];
   };
 
-  # system-wide zprofile and zshrc
-  programs.zsh = {
-    enable = true;
-    enableCompletion = false;
-    enableBashCompletion = false;
-  };
-
-  environment.profiles = lib.mkForce [
-    "/run/current-system/sw"
-    "$HOME/.nix-profile"
-    "/etc/profiles/per-user/$USER"
-  ];
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
-
   # Set Git commit hash for darwin-version.
   system.configurationRevision = self.rev or self.dirtyRev or null;
 
@@ -71,5 +54,6 @@
 
   imports = [
     ./homebrew.nix
+    ./environment.nix
   ];
 }
