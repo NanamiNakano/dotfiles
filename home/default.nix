@@ -11,6 +11,8 @@
     ripgrep
     eza
     helix
+    just
+    bat
   ];
 
   programs.home-manager.enable = true;
