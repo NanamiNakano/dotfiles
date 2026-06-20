@@ -30,7 +30,12 @@
     ];
   };
 
-  programs.zsh.enable = true;
+  # system-wide zprofile and zshrc
+  programs.zsh = {
+    enable = true;
+    enableCompletion = false;
+    enableBashCompletion = false;
+  };
 
   environment.profiles = lib.mkForce [
     "/run/current-system/sw"
