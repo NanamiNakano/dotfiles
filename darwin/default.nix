@@ -1,4 +1,10 @@
-{ self, username, lib, pkgs, ... }:
+{
+  self,
+  username,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   nixpkgs.hostPlatform = "aarch64-darwin";

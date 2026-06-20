@@ -6,13 +6,13 @@
   home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
-    nixd
+    nil
     nixfmt-rs
     ripgrep
     eza
     helix
   ];
-  
+
   programs.home-manager.enable = true;
 
   imports = [

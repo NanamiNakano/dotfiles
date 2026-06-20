@@ -18,6 +18,7 @@
       self,
       nix-darwin,
       home-manager,
+      nixpkgs,
       ...
     }:
     let
@@ -32,9 +33,10 @@
       };
     in
     {
+      formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixfmt-rs;
       # Build darwin flake using:
-      # $ darwin-rebuild build --flake .#Nanamis-Big-MacBook-Pro
-      darwinConfigurations."Nanamis-Big-MacBook-Pro" = nix-darwin.lib.darwinSystem {
+      # $ darwin-rebuild build --flake .#default
+      darwinConfigurations.default = nix-darwin.lib.darwinSystem {
         specialArgs = {
           inherit self username inputs;
         };
