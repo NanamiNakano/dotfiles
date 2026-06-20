@@ -8,6 +8,7 @@
 
   homebrew.brews = [
     "nanaminakano/gpoc/globalprotect-openconnect"
+    "xcodes"
   ];
 
   homebrew.casks = [
