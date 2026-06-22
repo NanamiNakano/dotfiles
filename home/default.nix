@@ -14,6 +14,7 @@
     just
     bat
     texlive.combined.scheme-full
+    tex-fmt
   ];
 
   programs.home-manager.enable = true;
