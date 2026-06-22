@@ -26,7 +26,6 @@
     "snipaste"
     "calibre"
     "visual-studio-code"
-    "mactex"
     "openinterminal-lite"
 
     # quick look extensions

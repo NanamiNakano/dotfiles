@@ -13,6 +13,7 @@
     helix
     just
     bat
+    texlive.combined.scheme-full
   ];
 
   programs.home-manager.enable = true;
