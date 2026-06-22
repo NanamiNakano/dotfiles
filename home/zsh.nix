@@ -107,6 +107,7 @@
       "Aloxaf/fzf-tab"
 
       "zsh-users/zsh-autosuggestions kind:defer"
+      "nix-community/nix-zsh-completions kind:defer"
       "z-shell/ZUI kind:defer"
       "z-shell/F-Sy-H kind:defer"
       "z-shell/zzcomplete kind:defer"
