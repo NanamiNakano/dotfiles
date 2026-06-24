@@ -47,6 +47,7 @@
     shellAliases = {
       lx = "eza -a --icons -G -l";
       la = "eza -a -G";
+      refresh-comp = "/bin/rm ~/.cache/zsh/zcompdump && exec zsh";
       darwin-build = "darwin-rebuild build --flake ~/dotfiles#default";
       darwin-switch = "sudo darwin-rebuild switch --flake ~/dotfiles#default";
       darwin-update = "nix flake update --flake ~/dotfiles";

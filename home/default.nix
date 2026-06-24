@@ -7,14 +7,12 @@
 
   home.packages = with pkgs; [
     nil
-    nixfmt-rs
     ripgrep
     eza
     helix
     just
     bat
     texlive.combined.scheme-full
-    tex-fmt
   ];
 
   programs.home-manager.enable = true;
