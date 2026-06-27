@@ -27,6 +27,7 @@
     "calibre"
     "visual-studio-code"
     "openinterminal-lite"
+    "obsidian"
 
     # quick look extensions
     "syntax-highlight"
