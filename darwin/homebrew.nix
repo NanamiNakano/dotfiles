@@ -28,6 +28,7 @@
     "visual-studio-code"
     "openinterminal-lite"
     "obsidian"
+    "Sikarugir-App/sikarugir/sikarugir"
 
     # quick look extensions
     "syntax-highlight"
