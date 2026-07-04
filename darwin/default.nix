@@ -28,6 +28,11 @@
       "nixpkgs=flake:nixpkgs"
     ];
   };
+  nix.gc = {
+    automatic = true;
+    options = "--delete-older-than 14d";
+  };
+  nix.optimise.automatic = true;
 
   # Set Git commit hash for darwin-version.
   system.configurationRevision = self.rev or self.dirtyRev or null;
