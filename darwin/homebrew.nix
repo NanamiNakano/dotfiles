@@ -8,8 +8,6 @@
 
   homebrew.brews = [
     "nanaminakano/gpoc/globalprotect-openconnect"
-    "openconnect"
-    "ocproxy"
     "xcodes"
   ];
 

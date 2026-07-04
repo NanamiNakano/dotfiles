@@ -13,6 +13,8 @@
     just
     bat
     texlive.combined.scheme-full
+    openconnect
+    ocproxy
   ];
 
   programs.home-manager.enable = true;
