@@ -58,7 +58,6 @@
   security.pam.services.sudo_local.touchIdAuth = true;
 
   imports = [
-    ./homebrew.nix
     ./environment.nix
   ];
 }
