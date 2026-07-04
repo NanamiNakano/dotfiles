@@ -11,6 +11,10 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    extra = {
+      url = "path:./extra";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -19,6 +23,7 @@
       nix-darwin,
       home-manager,
       nixpkgs,
+      extra,
       ...
     }:
     let
@@ -42,6 +47,11 @@
         };
 
         modules = [
+          {
+            nixpkgs.overlays = [
+              extra.overlays.default
+            ];
+          }
           darwinConfiguration
           home-manager.darwinModules.home-manager
           homeConfiguration

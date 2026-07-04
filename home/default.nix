@@ -13,7 +13,6 @@
     just
     bat
     texlive.combined.scheme-full
-    openconnect
     ocproxy
   ];
 
