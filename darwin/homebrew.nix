@@ -6,11 +6,6 @@
     onActivation.cleanup = "zap";
   };
 
-  homebrew.brews = [
-    "nanaminakano/gpoc/globalprotect-openconnect"
-    "xcodes"
-  ];
-
   homebrew.casks = [
     "iterm2"
     "secretive"

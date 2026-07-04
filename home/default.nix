@@ -14,6 +14,8 @@
     bat
     texlive.combined.scheme-full
     ocproxy
+    gpoc
+    xcodes
   ];
 
   programs.home-manager.enable = true;
