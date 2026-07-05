@@ -120,7 +120,6 @@
       "ohmyzsh/ohmyzsh path:plugins/sudo/sudo.plugin.zsh kind:defer"
       "ohmyzsh/ohmyzsh path:plugins/brew/brew.plugin.zsh kind:defer"
       "ohmyzsh/ohmyzsh path:plugins/extract/extract.plugin.zsh kind:defer"
-      "MichaelAquilina/zsh-autoswitch-virtualenv kind:defer"
       "sunlei/zsh-ssh kind:defer"
     ];
   };
