@@ -6,9 +6,12 @@
   home.stateVersion = "26.05";
 
   home.packages = with pkgs; [
+    # Language servers
     nil
     nixd
     rust-analyzer
+    tombi
+
     lldb
     ripgrep
     eza
