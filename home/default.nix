@@ -7,6 +7,7 @@
 
   home.packages = with pkgs; [
     nil
+    nixd
     ripgrep
     eza
     helix
@@ -16,6 +17,7 @@
     ocproxy
     gpoc
     xcodes
+    opencode
   ];
 
   programs.home-manager.enable = true;
