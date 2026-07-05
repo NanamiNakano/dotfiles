@@ -8,6 +8,8 @@
   home.packages = with pkgs; [
     nil
     nixd
+    rust-analyzer
+    lldb
     ripgrep
     eza
     helix
