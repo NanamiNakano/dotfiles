@@ -1,0 +1,75 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "semantic_tokens": "combined",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "buffer_line_height": "standard",
+  "buffer_font_weight": 400.0,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_features": {
+    "calt": true,
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": 16.0,
+  "language_models": {
+    "ollama": {
+      "api_url": "https://ollama.com",
+    },
+  },
+  "terminal": {
+    "show_count_badge": false,
+    "flexible": true,
+  },
+  "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
+    "favorite_models": [
+      {
+        "provider": "ollama",
+        "model": "glm-5.2",
+        "enable_thinking": true,
+      },
+      {
+        "provider": "openai-subscribed",
+        "model": "gpt-5.5",
+        "enable_thinking": true,
+        "effort": "xhigh",
+      },
+    ],
+    "model_parameters": [],
+  },
+  "agent_servers": {},
+  "icon_theme": {
+    "mode": "light",
+    "light": "Material Icon Theme",
+    "dark": "Zed (Default)",
+  },
+  "base_keymap": "JetBrains",
+  "theme": {
+    "mode": "light",
+    "light": "JetBrains Light",
+    "dark": "Ayu Dark",
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+}
