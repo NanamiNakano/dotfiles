@@ -1,0 +1,111 @@
+[
+  {
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-_": ["zed::DecreaseBufferFontSize", { "persist": true }],
+      "cmd-+": ["zed::IncreaseBufferFontSize", { "persist": true }],
+      "cmd-;": "debugger::StepInto",
+      "cmd-'": "debugger::StepOver",
+      "cmd-\\": "debugger::StepOut",
+      "ctrl-\\": "debugger::Continue",
+      "ctrl->": "debugger::Stop",
+      "cmd-f2": "debugger::Stop"
+    }
+  },
+  {
+    "context": "Workspace && !Terminal",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-cmd-b": "task::Spawn",
+      "cmd-f9": "task::Spawn",
+      "alt-shift-d": "debugger::Start",
+      "alt-shift-r": "task::Spawn",
+      "ctrl-cmd-r": "task::Rerun",
+      "ctrl-cmd-t": "terminal_panel::Toggle"
+    }
+  },
+  {
+    "context": "Pane",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-[": "pane::GoBack",
+      "cmd-]": "pane::GoForward",
+      "cmd-alt-left": "pane::ActivatePreviousItem",
+      "cmd-{": "pane::ActivatePreviousItem",
+      "cmd-alt-right": "pane::ActivateNextItem",
+      "cmd-}": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "Editor",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-i": "editor::Hover",
+      "f1": "editor::Hover",
+      "ctrl-o": "editor::Newline",
+      "ctrl-enter": "editor::Newline",
+      "cmd-alt-r": "editor::Rename",
+      "shift-f6": "editor::Rename",
+      "ctrl-u": "editor::FindAllReferences",
+      "ctrl-alt-u": "editor::FindAllReferences",
+      "cmd-y": "editor::GoToImplementation",
+      "cmd-&": "outline::Toggle",
+      "ctrl-shift-up": "editor::MoveLineUp",
+      "ctrl-shift-down": "editor::MoveLineDown",
+      "ctrl-shift-v": "editor::SelectPageDown",
+      "alt-_": "editor::FoldAll",
+      "alt-+": "editor::UnfoldAll",
+      "ctrl-'": "editor::ToggleBreakpoint",
+      "cmd-f8": "editor::ToggleBreakpoint",
+      "ctrl-,": "editor::GoToDiagnostic",
+      "ctrl-<": "editor::GoToPreviousDiagnostic",
+      "cmd-alt-/": "editor::ToggleBlockComments",
+      "ctrl-?": "editor::ToggleBlockComments"
+    }
+  },
+  {
+    "context": "Editor && mode == full",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-q": "pane::RevealInProjectPanel",
+      "alt-f1": "pane::RevealInProjectPanel",
+      "ctrl-shift-u": ["buffer_search::Deploy", { "selection_search_enabled": true }],
+      "cmd-f7": ["buffer_search::Deploy", { "selection_search_enabled": true }]
+    }
+  },
+  {
+    "context": "GitDiff > Editor",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-[": "editor::GoToPreviousHunk",
+      "shift-f7": "editor::GoToPreviousHunk",
+      "cmd-]": "editor::GoToHunk",
+      "f7": "editor::GoToHunk"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-shift-n": "project_panel::NewDirectory",
+      "cmd-alt-r": "project_panel::Rename",
+      "shift-f6": "project_panel::Rename",
+      "f4": "project_panel::Open",
+      "cmd-down": "project_panel::Open",
+      "alt-up": "menu::SelectFirst",
+      "alt-shift-up": "menu::SelectFirst",
+      "alt-down": "menu::SelectLast",
+      "alt-shift-down": "menu::SelectLast"
+    }
+  },
+  {
+    "context": "menu",
+    "use_key_equivalents": true,
+    "bindings": {
+      "alt-up": "menu::SelectFirst",
+      "alt-shift-up": "menu::SelectFirst",
+      "alt-down": "menu::SelectLast",
+      "alt-shift-down": "menu::SelectLast"
+    }
+  }
+]
