@@ -9,8 +9,17 @@
     # Language servers
     nil
     nixd
-    rust-analyzer
     tombi
+
+    # Developing environments
+    (rust-bin.stable.latest.default.override {
+      extensions = [
+        "rust-src"
+        "rust-analyzer"
+      ];
+      targets = [ "wasm32-wasip2" ];
+    })
+    texlive.combined.scheme-full
 
     lldb
     ripgrep
@@ -18,7 +27,6 @@
     helix
     just
     bat
-    texlive.combined.scheme-full
     ocproxy
     gpoc
     xcodes
