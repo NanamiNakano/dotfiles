@@ -15,6 +15,7 @@
     rustup
     texlive.combined.scheme-full
     lldb
+    pnpm
 
     ripgrep
     eza
@@ -38,6 +39,15 @@
         hide_env_diff = true;
       };
     };
+  };
+
+  programs.mise = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.uv = {
+    enable = true;
   };
 
   imports = [
