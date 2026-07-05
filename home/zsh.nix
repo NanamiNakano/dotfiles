@@ -9,12 +9,21 @@
     enable = true;
     enableZshIntegration = true;
     presets = [
-      "bracketed-segments"
-      "nerd-font-symbols"
+      "pure-preset"
     ];
     settings = {
-      aws.disabled = true;
-      gcloud.disabled = true;
+      format = lib.concatStrings [
+        "$username"
+        "$hostname"
+        "$directory"
+        "$git_branch"
+        "$git_state"
+        "$git_status"
+        "$cmd_duration"
+        "$line_break"
+        "$nix_shell"
+        "$character"
+      ];
       username = {
         format = "[$user]($style) on ";
         style_user = "bold #8be9fd";
