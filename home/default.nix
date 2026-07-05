@@ -12,16 +12,10 @@
     tombi
 
     # Developing environments
-    (rust-bin.stable.latest.default.override {
-      extensions = [
-        "rust-src"
-        "rust-analyzer"
-      ];
-      targets = [ "wasm32-wasip2" ];
-    })
+    rustup
     texlive.combined.scheme-full
-
     lldb
+
     ripgrep
     eza
     helix

@@ -15,10 +15,6 @@
       url = "path:./extra";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs =
@@ -28,7 +24,6 @@
       home-manager,
       nixpkgs,
       extra,
-      rust-overlay,
       ...
     }:
     let
@@ -55,7 +50,6 @@
           {
             nixpkgs.overlays = [
               extra.overlays.default
-              rust-overlay.overlays.default
             ];
           }
           darwinConfiguration
