@@ -32,6 +32,7 @@
     globalConfig = {
       tools = {
         node = "lts";
+        java = "temurin-25";
       };
     };
   };
