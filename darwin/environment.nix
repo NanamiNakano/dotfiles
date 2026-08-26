@@ -10,6 +10,7 @@
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    eb-garamond
   ];
 
   environment.profiles = lib.mkForce [

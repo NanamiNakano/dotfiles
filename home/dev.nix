@@ -13,6 +13,9 @@
     lldb
     pnpm
     xcodes
+    gleam
+    beamPackages.erlang
+    beamPackages.rebar3
   ];
 
   programs.direnv = {
