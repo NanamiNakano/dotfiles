@@ -19,6 +19,10 @@
     "/etc/profiles/per-user/$USER"
   ];
 
+  environment.systemPath = [
+    "~/.local/bin"
+  ];
+
   # https://github.com/apple-oss-distributions/zsh/blob/main/zprofile
   environment.etc."zprofile.local".text = ''
     # System-wide profile for interactive zsh(1) login shells.
