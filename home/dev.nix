@@ -10,6 +10,7 @@
     # Developing environments
     rustup
     texlive.combined.scheme-full
+    typst
     lldb
     pnpm
     xcodes
