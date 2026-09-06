@@ -18,9 +18,11 @@
     always-allow-substitutes = true;
     extra-trusted-substituters = [
       "https://cache.lix.systems"
+      "https://typst-nix.cachix.org"
     ];
     extra-trusted-public-keys = [
       "cache.lix.systems:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o="
+      "typst-nix.cachix.org-1:OzDUMt0nd4wlI1AHucBPnchl4utWXeFTtUFt8XZ3DbA="
     ];
     bash-prompt-prefix = "(nix:$name)\\040";
     max-jobs = "auto";
