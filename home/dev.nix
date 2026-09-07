@@ -11,6 +11,7 @@
     rustup
     texlive.combined.scheme-full
     typst
+    utpm
     lldb
     pnpm
     xcodes
