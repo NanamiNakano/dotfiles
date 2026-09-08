@@ -3,7 +3,6 @@
 
   inputs = {
     gpoc.url = "github:yuezk/GlobalProtect-openconnect";
-    utpm.url = "github:typst-community/utpm";
   };
 
   outputs =
@@ -15,7 +14,6 @@
     {
       overlays.default = final: prev: {
         gpoc = gpoc.packages.${final.stdenv.hostPlatform.system}.default;
-        utpm = utpm.packages.${final.stdenv.hostPlatform.system}.default;
       };
     };
 }
