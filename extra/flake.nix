@@ -8,7 +8,6 @@
   outputs =
     {
       gpoc,
-      utpm,
       ...
     }:
     {

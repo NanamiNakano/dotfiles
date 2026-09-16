@@ -14,7 +14,6 @@
     };
     extra = {
       url = "path:./extra";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

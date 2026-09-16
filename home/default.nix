@@ -12,7 +12,6 @@
     just
     bat
     ocproxy
-    gpoc
     opencode
   ];
 
