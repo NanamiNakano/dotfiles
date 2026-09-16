@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs,... }:
 
 {
   home.packages = with pkgs; [
@@ -10,7 +10,7 @@
     # Developing environments
     rustup
     texlive.combined.scheme-full
-    typst
+    unstable.typst
     cmake
     lldb
     pnpm
